@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/Pages/home_page.dart';
 import 'package:flutter_learn_app/Pages/login_page.dart';
+import 'package:flutter_learn_app/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-// ignore: camel_case_types
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }

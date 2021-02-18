@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_app/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -46,13 +47,14 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 30.0,
+                    height: 45.0,
                   ),
                   ElevatedButton(
                     child: Text("Login"),
-                    style: TextButton.styleFrom(),
+                    style: TextButton.styleFrom(minimumSize: Size(120, 40)),
                     onPressed: () {
-                      print("Hi User");
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      //login page to homepage push pop..routes
                     },
                   )
                 ],
