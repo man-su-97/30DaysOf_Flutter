@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
-    final imageUrl = 
-        "https://lh3.googleusercontent.com/xLh7mATrewL_0TWxCI792rD8DMXQQFgWoOUPH2SiBeKFLhTRyr-abltTnuqFy02_baIiiCnltbTYCD9ADVPLD7Acl63pda55zPR33ge-fyOkTdvAqdLJ_8NZWPcgspOxTzSOHQmEbqyvk_M_uJ-34f-PzoRlNz03jhgsBhdGJ_gV0gzViRijY2SkSpbNOwtRfXvsz76nx290jE_blP1Dm4TXIswvDmxGRWl3tPM_l7DwNgTohJgOvToFvXnr8H3kdwrcm7SvFQEPQnrey-H5rh3TgXuLVJ4df_0sms7f-lUs5fG1-5stdHqhbN6bhjRtAEXc_TpkmbGyWGySf8aXUDsvajyrnID1yiov6JwagHZh_QLsiDTS8zKed6pw67A1CQcsNQIDNQccAmA5vO2JiMEwRjQ6uryYGFD6NRz7y6-vYV-J_Tz4jD4HAg-K6zYF5WoLQxOeVXJE91-hC4X23KQV_JFrQCkhdNONMpFlSJfFDVaZBWhabaNuuEm9OfgGrrwD1_Ye0y-pKm6mu2UCcvh9o6Ga4DNezKQfcfGX-y2o5xC3kGaiRziKmVIEOD9KOfzFkuBJtA0zusm4AZT9hjtLEVWIBZUvE7MWdFpTOCq6XPIMIuwiyO8yP_mn89-on-MazDQVn0CRz9gBAxqBA_eR0p6RN-vVwERr7_biQ92vgnnm4uLMH7rKxVD5zMQ=w688-h925-no?authuser=0";
+    final imageUrl =
+        "https://lh3.googleusercontent.com/8ZLy8_QZebI6hLTL_L3x6okOBsM0gx-m9D2g9FvVwmnbjJpZjmSnN5CS0JhuMIkvyO-WX1ra5Hkti2jYOtQODvJgDmClmgTrSyPJrcUFWLUhlExARmkGtLzNw6xuvl1v6QWGuAHDG01MhTjIYg1CuWbugDn-_gQKrthjlRloVd_6KjX5dUH14F5R16sAK9P8xrr3cGXhJHbASyLUdfwTaHJk8sHqbprLBXk2uUDK89czniR8-xvp2EWHlQS6xPHevF3l_15EMAidu0b_-FomsZwvqAmEhecVG62CUejZnpssr_87LF6oAvqGjJDYyE7nFDMURDP6RLqmfdpi_CoOQGENvvszUR-p6O4flwjK_frfo24onBfy-MU3U0azbM1Dc1bEnhdyHIiju3pyd8EK9LUv1ciZhxuu3Ght3gmXUVdx0eQs1Z5vdAd38Y_upPwBkYvsxc2IcYk3aefAQJ8y7Q9ueDGJ3_ZKLQ7w4v4eqLvltWgnl4qxxiG2jwimx4dEVnpPhDKw7dICX6mOqB-ebK-eVYUW_rRm_XkLcsBLBI3fYqm1seZw9gyKKcDAP3_U06md4ZNujzGME_xTm-VaSrRKvvoUfR5tWbg5QWjRtJ9Kk5rD9Nx-7MWsi4HmwySgtbqULM6gH3iSmsSdYJKphc3SWnk5r16aJQrEYvEk-Vge1Kff1mhCaubr4byjYTE=w161-h218-no?authuser=0";
+
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
@@ -17,7 +17,14 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                accountName: Text("Suman Mandal"),
+                accountName: Text(
+                  "Suman Mandal",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 accountEmail: Text("SumanMandal15135@gmail.com"),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageUrl),
